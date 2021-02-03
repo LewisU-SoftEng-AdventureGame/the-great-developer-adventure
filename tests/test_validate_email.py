@@ -5,7 +5,7 @@ import pytest
     ('john.doe@somecompany.com', True),
     ('asdfjkl;lkj', False),
     ('', False),
-    ('test to force it to fail', True)
+    ('test to force it to fail', False)
 ])
 def test_validate_email(email, is_okay):
     assert validate_email(email) == is_okay
